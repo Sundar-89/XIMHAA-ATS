@@ -1,0 +1,43 @@
+<!DOCTYPE html><html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>XIMHAA ATS — Resume Viewer</title> <link rel="stylesheet" href="css/theme.css"> <link rel="stylesheet" href="css/ats-dashboard.css"> <link rel="stylesheet" href="css/analytics.css"> <link rel="stylesheet" href="css/holographic.css"> <meta name="theme-color" content="#000033"> </head> <body class="ats"> <aside class="ats-sidebar"> <div class="ats-brand">XIMHAA ATS</div> <a class="nav" href="#" onclick="history.back()">← Back</a> </aside> <main class="ats-main"> <header class="ats-header"> <h2 id="viewer-title">Resume Viewer</h2> <div style="display:flex;gap:8px"> <button class="nb-btn-outline" id="btn-role" onclick="backToRole()">Back to Role</button> </div> </header>
+<section class="viewer-wrap">
+  <div class="viewer-left holo-frame scanlines">
+    <div id="resume-pane" class="resume-pane">
+      <!-- Resume content renders here -->
+    </div>
+  </div>
+
+  <div class="viewer-right">
+    <div class="analytics-card card">
+      <h3 style="margin-top:0">Analytics</h3>
+      <div class="gauge-wrap">
+        <div class="gauge">
+          <div class="gauge-needle" id="fit-needle"></div>
+          <div class="gauge-center">
+            <div id="fit-score">0%</div>
+            <div class="muted" style="font-size:12px">Fit Score</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chart-grid">
+        <div class="chart-card">
+          <h4>Must-Have Coverage</h4>
+          <div id="musthave-badges" class="tags"></div>
+        </div>
+        <div class="chart-card">
+          <h4>Skill Radar</h4>
+          <canvas id="skill-radar" height="180"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:12px">
+      <label>Justification</label>
+      <textarea id="viewer-justif" rows="3" placeholder="Why this candidate? (min 15 chars)"></textarea>
+      <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:10px">
+        <button class="nb-btn" id="btn-shortlist" onclick="shortlistFromViewer()">Shortlist</button>
+      </div>
+    </div>
+  </div>
+</section>
+</main> <!-- Optional Chart.js for radar chart --> <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <script src="js/router.js"></script> <script src="js/data.js"></script> <script src="js/state.js"></script> <script src="js/ui-kit.js"></script> <script src="js/analytics.js"></script> <script src="js/viewer.js"></script> </body> </html>
