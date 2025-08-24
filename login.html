@@ -1,0 +1,17 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>XIMHAA ATS — Login</title> <link rel="stylesheet" href="css/theme.css"> <link rel="stylesheet" href="css/ats-dashboard.css"> <meta name="theme-color" content="#000033"> </head> <body class="nb-bg center"> <div class="login-card"> <h1 style="margin:0 0 6px">XIMHAA ATS</h1> <p class="muted" style="margin:0 0 16px">Demo access (no input required)</p>
+<label>Username</label>
+<input disabled value="team@nutribite.com">
+
+<label>Password</label>
+<input disabled type="password" value="- - - - - - - - ">
+
+<label>Department</label>
+<div class="muted" style="font-size:13px">Choose department on the next screen</div>
+
+<div style="display:flex; gap:10px; margin-top:14px">
+  <button type="button" class="nb-btn" onclick="enterATS()">Login</button>
+  <a class="nb-btn-outline" href="index.html">Back to site</a>
+</div>
+
+<div class="login-note">Tip: Clicking Login sets a demo session and opens the dashboard.</div>
+</div> <!-- Script order matters: session helper first --> <script src="js/state.js"></script> <script src="js/auth.js"></script> </body> </html>
