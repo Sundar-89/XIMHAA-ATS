@@ -1,0 +1,5 @@
+<!DOCTYPE html><html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>XIMHAA ATS — Role Candidates</title> <link rel="stylesheet" href="css/theme.css"> <link rel="stylesheet" href="css/ats-dashboard.css"> <meta name="theme-color" content="#000033"> </head> <body class="ats"> <aside class="ats-sidebar"> <div class="ats-brand">XIMHAA ATS</div> <a class="nav" href="#" onclick="history.back()">← Back</a> </aside> <main class="ats-main"> <header class="ats-header"> <h2 id="role-title">Role</h2> <div id="timer" class="timer"></div> </header>
+<section id="cand-grid" class="card-grid">
+  <!-- Candidate cards will render here -->
+</section>
+</main> <!-- Detail Modal --> <div id="cand-modal" class="modal hidden"> <div class="modal-body"> <button class="close" onclick="UI.hideModal('cand-modal')">×</button> <div id="modal-content"></div> </div> </div> <script src="js/router.js"></script> <script src="js/data.js"></script> <script src="js/state.js"></script> <script src="js/timer.js"></script> <script src="js/ui-kit.js"></script> <script src="js/role.js"></script> </body> </html>
