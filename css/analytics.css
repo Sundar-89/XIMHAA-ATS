@@ -1,0 +1,11 @@
+.viewer-wrap{display:grid;grid-template-columns:1.3fr .9fr;gap:16px}
+.resume-pane{padding:16px}
+.viewer-right .card{background:var(--surface);border:1px solid rgba(255,255,255,.06);border-radius:12px;box-shadow:var(--shadow);padding:16px}
+.analytics-card .chart-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
+.chart-card{background:#0c0e21;border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:10px}
+.gauge-wrap{display:grid;place-items:center;margin:8px 0 2px}
+.gauge{position:relative;width:200px;height:100px;background:conic-gradient(from 180deg, rgba(0,255,65,.22) 0deg, rgba(0,255,65,.22) 60deg, rgba(238,173,14,.35) 60deg, rgba(238,173,14,.35) 120deg, rgba(255,60,60,.28) 120deg, rgba(255,60,60,.28) 180deg);border-bottom-left-radius:200px;border-bottom-right-radius:200px;overflow:hidden}
+.gauge::after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;background:#0c0e21}
+.gauge-center{position:absolute;left:50%;top:75%;transform:translate(-50%,-50%);text-align:center}
+.gauge-needle{position:absolute;left:50%;bottom:0;width:2px;height:96px;background:#fff;transform-origin:bottom center;transform:rotate(0deg);box-shadow:0 0 8px rgba(255,255,255,.4)}
+#fit-score{font-weight:800;font-size:22px}
