@@ -39,7 +39,10 @@ grid.innerHTML = cards;
 }
 
 function openCandidate(id){
-const c = candidates.find(x => x.id === id);
+const url = 'viewer.html?dept=' + encodeURIComponent(dept) +
+'&role=' + encodeURIComponent(roleId) +
+'&candidate=' + encodeURIComponent(id);
+window.location.href = url;
 if (!c) return;
 
 const skills = (c.skills || []).map(s=>'<span class="tag">'+s+'</span>').join('');
@@ -82,4 +85,5 @@ function softLock(){
 // Make all action buttons read-only when time’s up
 document.querySelectorAll('.actions button').forEach(b => { b.disabled = true; b.style.opacity = .7; });
 document.getElementById('timer').textContent = 'Time is up';
+
 }
