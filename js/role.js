@@ -34,29 +34,46 @@ return;
 }
 
 const cards = candidates.map(c => {
-const skills = (c.skills || []).slice(0, 6).map(s => '<span class="tag">' + s + '</span>').join('');
-const strengths = (c.strengths || []).slice(0, 4).map(s => '<span class="tag neutral">' + s + '</span>').join('');
-return (
-'<div class="cand-card" data-id="' + c.id + '">' +
-'<div class="cand-head">' +
-'<h3>' + c.name + '</h3>' +
-'<span class="pill ' + (c.seniority==='Senior' ? 'senior' : 'junior') + '">' + (c.seniority || '') + '</span>' +
-'</div>' +
-'<p class="summary">' + (c.summary || '') + '</p>' +
-'<div class="tags">' + skills + '</div>' +
-'<div class="tags">' + strengths + '</div>' +
-'<div class="actions">' +
-'<button class="nb-btn js-view" data-id="' + c.id + '">View</button>' +
-'<button class="nb-btn-outline js-select" data-id="' + c.id + '">Select</button>' +
-'</div>' +
-'</div>'
-);
+const skills = (c.skills || [])
+.slice(0, 6)
+.map(s => <span class="tag">${s}</span>)
+.join('');
+const strengths = (c.strengths || [])
+  .slice(0, 4)
+  .map(s => `<span class="tag neutral">${s}</span>`)
+  .join('');
+
+return 
+  <div class="cand-card" data-id="${c.id}">
+    <div class="cand-head">
+      <h3>${c.name}</h3>
+      <span class="pill ${c.seniority==='Senior' ? 'senior' : 'junior'}">${c.seniority || ''}</span>
+    </div>
+    <p class="summary">${c.summary || ''}</p>
+    <div class="tags">${skills}</div>
+    <div class="tags">${strengths}</div>
+    <div class="actions">
+      <button class="nb-btn js-view" data-id="${c.id}">View</button>
+      <button class="nb-btn-outline js-select" data-id="${c.id}">Select</button>
+    </div>
+  </div>
+;
 }).join('');
 
 grid.innerHTML = cards;
 
-// Event delegation (attach once)
-grid.addEventListener('click', onGridClick, { once: true });
+// Delegate click handlers to avoid inline onclick issues
+grid.addEventListener('click', (e) => {
+const btn = e.target.closest('button');
+if (!btn) return;
+const id = btn.getAttribute('data-id');
+if (!id) return;
+if (btn.classList.contains('js-view')) {
+  openCandidate(id);
+} else if (btn.classList.contains('js-select')) {
+  promptSelect(id);
+}
+}, { once: true });
 }
 
 function onGridClick(e){
