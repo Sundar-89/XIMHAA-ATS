@@ -63,6 +63,18 @@ function renderAnalytics(){
 	return has ? 100 : 30;
   });
   XAnalytics.renderNiceBar('nice-bar', niceList, niceVals);
+  const allRoles = await XData.getRolesByDept(vDept);
+  populateRoleSwitchViewer(allRoles);
+}
+
+function populateRoleSwitchViewer(roles){
+const sel = document.getElementById('role-switch-viewer');
+if (!sel) return;
+sel.innerHTML = roles.map(r => '<option value="'+r.id+'"' + (r.id===vRoleId?' selected':'') + '>' + r.title + '</option>').join('');
+sel.onchange = function(){
+const newRole = sel.value;
+window.location.href = 'role.html?dept=' + encodeURIComponent(vDept) + '&role=' + encodeURIComponent(newRole);
+};
 }
 
 function shortlistFromViewer(){
