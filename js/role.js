@@ -8,6 +8,7 @@ roleId = q.get('role');
 // Load role metadata
 const roles = await XData.getRoles();
 roleMeta = roles.find(r => r.id === roleId);
+
 const titleEl = document.getElementById('role-title');
 titleEl.textContent = roleMeta ? roleMeta.title : 'Role';
 
@@ -15,8 +16,9 @@ titleEl.textContent = roleMeta ? roleMeta.title : 'Role';
 candidates = await XData.getCandidatesByRole(roleId);
 renderCandidates();
 
-// Start a soft timer (default 210s = 3.5 min). Change as needed.
-XTimer.startTimer(210,
+// Start a soft timer (3.5 minutes)
+XTimer.startTimer(
+210,
 (t) => { const el = document.getElementById('timer'); if (el) el.textContent = 'Time left: ' + t + 's'; },
 () => { softLock(); }
 );
@@ -30,39 +32,41 @@ return;
 }
 
 const cards = candidates.map(c => {
-const skills = (c.skills || []).slice(0, 6).map(s=>'<span class="tag">'+s+'</span>').join('');
-const strengths = (c.strengths || []).slice(0, 4).map(s=>'<span class="tag neutral">'+s+'</span>').join('');
-return <div class="cand-card"> <div class="cand-head"> <h3>${c.name}</h3> <span class="pill ${c.seniority==='Senior'?'senior':'junior'}">${c.seniority || ''}</span> </div> <p class="summary">${c.summary || ''}</p> <div class="tags">${skills}</div> <div class="tags">${strengths}</div> <div class="actions"> <button class="nb-btn" onclick="openCandidate('${c.id}')">View</button> <button class="nb-btn-outline" onclick="promptSelect('${c.id}')">Select</button> </div> </div> ;
+const skills = (c.skills || []).slice(0, 6).map(s => <span class="tag">${s}</span>).join('');
+const strengths = (c.strengths || []).slice(0, 4).map(s => <span class="tag neutral">${s}</span>).join('');
+return <div class="cand-card" data-id="${c.id}"> <div class="cand-head"> <h3>${c.name}</h3> <span class="pill ${c.seniority==='Senior' ? 'senior' : 'junior'}">${c.seniority || ''}</span> </div> <p class="summary">${c.summary || ''}</p> <div class="tags">${skills}</div> <div class="tags">${strengths}</div> <div class="actions"> <button class="nb-btn js-view" data-id="${c.id}">View</button> <button class="nb-btn-outline js-select" data-id="${c.id}">Select</button> </div> </div> ;
 }).join('');
 
 grid.innerHTML = cards;
+
+// Event delegation to avoid inline onclick quoting issues
+grid.addEventListener('click', (e) => {
+const btn = e.target.closest('button');
+if (!btn) return;
+const id = btn.getAttribute('data-id');
+if (!id) return;
+if (btn.classList.contains('js-view')) {
+  openCandidate(id);
+} else if (btn.classList.contains('js-select')) {
+  promptSelect(id);
+}
+}, { once: true });
 }
 
 function openCandidate(id){
 const url = 'viewer.html?dept=' + encodeURIComponent(dept) +
 '&role=' + encodeURIComponent(roleId) +
 '&candidate=' + encodeURIComponent(id);
-window.location.href = url;
+window.location.assign(url);
 }
 
 function promptSelect(id){
-// Quick select without opening modal (asks prompt for justification)
 const justif = prompt('Enter justification (min 15 chars):') || '';
 if (justif.trim().length < 15) {
 UI.toast('Please enter at least 15 characters.');
 return;
 }
 saveSelection(id, justif.trim());
-}
-
-function confirmSelect(id){
-const txt = document.getElementById('justif') ? document.getElementById('justif').value.trim() : '';
-if (txt.length < 15) {
-UI.toast('Please enter at least 15 characters.');
-return;
-}
-saveSelection(id, txt);
-UI.hideModal('cand-modal');
 }
 
 function saveSelection(candidateId, justification){
@@ -75,9 +79,6 @@ UI.toast('Selection saved.');
 }
 
 function softLock(){
-// Make all action buttons read-only when time’s up
 document.querySelectorAll('.actions button').forEach(b => { b.disabled = true; b.style.opacity = .7; });
-document.getElementById('timer').textContent = 'Time is up';
-
+const t = document.getElementById('timer'); if (t) t.textContent = 'Time is up';
 }
-
