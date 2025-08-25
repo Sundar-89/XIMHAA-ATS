@@ -1,27 +1,120 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>XIMHAA ATS — Dashboard</title> <link rel="stylesheet" href="css/theme.css"> <link rel="stylesheet" href="css/ats-dashboard.css"> <meta name="theme-color" content="#000033"> </head> <body class="ats"> <aside class="ats-sidebar"> <div class="ats-brand">XIMHAA ATS</div> <a class="nav active" href="#">Dashboard</a> </aside> <main class="ats-main"> <header class="ats-header"> <div id="user-slot"></div> <button class="nb-btn-outline" onclick="logout()">Logout</button> </header>
+<!DOCTYPE html><html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>XIMHAA ATS — Dashboard</title> <link rel="stylesheet" href="css/theme.css"> <link rel="stylesheet" href="css/ats-dashboard.css"> <meta name="theme-color" content="#000033"> <style> /* Add-on look & feel tweaks */ .kpi-grid { display:grid; grid-template-columns: repeat(4, 1fr); gap:12px; margin:12px 0 4px; } .kpi { background:var(--surface); border:1px solid rgba(255,255,255,.06); border-radius:12px; padding:12px; display:flex; align-items:center; gap:12px; } .kpi .icon { width:40px; height:40px; border-radius:10px; display:grid; place-items:center; font-weight:700 } .icon.gold { background:rgba(238,173,14,.18); color:#EEAD0E; border:1px solid rgba(238,173,14,.35) } .icon.cyan { background:rgba(0,255,255,.14); color:#00FFFF; border:1px solid rgba(0,255,255,.25) } .icon.green{ background:rgba(0,255,65,.14); color:#00FF41; border:1px solid rgba(0,255,65,.25) } .icon.purple{ background:rgba(157,78,221,.14); color:#9D4EDD; border:1px solid rgba(157,78,221,.35) } .kpi .meta { line-height:1.1 } .kpi .meta .label { color:#cfd3e1; font-size:12px } .kpi .meta .value { font-size:22px; font-weight:800 } .filter-bar { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin:10px 0; } .nb-tag { padding:6px 10px; border:1px solid rgba(255,255,255,.12); border-radius:999px; color:#cfd3e1; cursor:default; } .nb-select { background:#0c0e21; color:#e9ecf5; border:1px solid rgba(255,255,255,.12); padding:6px 8px; border-radius:8px } .mini-grid { display:grid; grid-template-columns: 2fr 1fr 1fr; gap:12px; } .mini-card { background:var(--surface); border:1px solid rgba(255,255,255,.06); border-radius:12px; padding:12px } .flex-split { display:flex; gap:12px; align-items:center; flex-wrap:wrap } .progress { width:100%; height:10px; background:#0c0e21; border-radius:999px; overflow:hidden; border:1px solid rgba(255,255,255,.08) } .progress > span { display:block; height:100%; background: linear-gradient(90deg, #00FFFF, #EEAD0E); width:0% } .muted { color:#a7adbd } .dept-card { position:relative; overflow:hidden; border:1px solid rgba(255,255,255,.08); border-radius:12px; padding:16px; background:linear-gradient(180deg, rgba(255,255,255,.02), transparent) } .dept-card:hover{ transform: translateY(-4px); transition:.25s; box-shadow: 0 12px 24px rgba(0,0,0,.25) } .dept-card h3 { margin:0 0 4px } .dept-card .metrics { display:flex; gap:8px; flex-wrap:wrap; color:#cfd3e1; font-size:12px } .dept-card .badge { border:1px solid rgba(255,255,255,.16); padding:2px 6px; border-radius:999px; color:#e9ecf5 } .insights { background:var(--surface); border:1px solid rgba(255,255,255,.06); border-radius:12px; padding:12px } details summary { cursor:pointer; color:#cfd3e1; } </style> </head> <body class="ats"> <aside class="ats-sidebar"> <div class="ats-brand">XIMHAA ATS</div> <a class="nav active" href="#">Dashboard</a> </aside> <main class="ats-main"> <header class="ats-header"> <div id="user-slot"></div> <div class="flex-split"> <button class="nb-btn-outline" onclick="void(0)">Create Report</button> <button class="nb-btn-outline" onclick="void(0)">Export CSV</button> <button class="nb-btn-outline" onclick="location.reload()">Refresh</button> <button class="nb-btn" onclick="logout()">Logout</button> </div> </header>
+<!-- Top KPIs -->
+<section class="kpi-grid">
+  <div class="kpi">
+    <div class="icon gold">FM</div>
+    <div class="meta"><div class="label">Open Roles</div><div class="value" id="kpi-roles">12</div></div>
+  </div>
+  <div class="kpi">
+    <div class="icon cyan">CA</div>
+    <div class="meta"><div class="label">Candidates</div><div class="value" id="kpi-cands">60</div></div>
+  </div>
+  <div class="kpi">
+    <div class="icon green">MV</div>
+    <div class="meta"><div class="label">Profiles Viewed</div><div class="value" id="kpi-views">37</div></div>
+  </div>
+  <div class="kpi">
+    <div class="icon purple">SL</div>
+    <div class="meta"><div class="label">Shortlisted</div><div class="value" id="kpi-shortlist">9</div></div>
+  </div>
+</section>
+
+<!-- Filter bar (non-functional, for look) -->
+<section class="filter-bar">
+  <span class="nb-tag">Stage: Screening</span>
+  <span class="nb-tag">Seniority: Mixed</span>
+  <span class="nb-tag">Period: Last 7 days</span>
+  <select class="nb-select" onchange="void(0)">
+    <option>Sort by: Views</option>
+    <option>Sort by: Shortlists</option>
+    <option>Sort by: Time</option>
+  </select>
+  <select class="nb-select" onchange="void(0)">
+    <option>Pipeline: All</option>
+    <option>Pipeline: Finance</option>
+    <option>Pipeline: Marketing</option>
+    <option>Pipeline: Operations</option>
+  </select>
+</section>
+
+<!-- Department tiles -->
 <section class="card-grid">
   <div class="dept-card" style="border-color:rgba(238,173,14,.35)">
     <h3>Finance</h3>
     <div class="metrics"><span>4 Roles</span><span>20 Candidates</span><span class="badge">New: 5</span></div>
-    <button class="nb-btn" onclick="chooseDept('finance')">Choose Department</button>
+    <div class="progress" title="Pipeline Health"><span id="p-fin" style="width:72%"></span></div>
+    <div class="muted" style="font-size:12px;margin-top:6px">Pipeline Health</div>
+    <button class="nb-btn" style="margin-top:8px" onclick="chooseDept('finance')">Choose Department</button>
   </div>
   <div class="dept-card" style="border-color:rgba(0,255,255,.25)">
     <h3>Marketing</h3>
     <div class="metrics"><span>4 Roles</span><span>20 Candidates</span><span class="badge">New: 5</span></div>
-    <button class="nb-btn" onclick="chooseDept('marketing')">Choose Department</button>
+    <div class="progress" title="Pipeline Health"><span id="p-mkt" style="width:64%"></span></div>
+    <div class="muted" style="font-size:12px;margin-top:6px">Pipeline Health</div>
+    <button class="nb-btn" style="margin-top:8px" onclick="chooseDept('marketing')">Choose Department</button>
   </div>
   <div class="dept-card" style="border-color:rgba(0,255,65,.25)">
     <h3>Operations</h3>
     <div class="metrics"><span>4 Roles</span><span>20 Candidates</span><span class="badge">New: 5</span></div>
-    <button class="nb-btn" onclick="chooseDept('operations')">Choose Department</button>
+    <div class="progress" title="Pipeline Health"><span id="p-ops" style="width:78%"></span></div>
+    <div class="muted" style="font-size:12px;margin-top:6px">Pipeline Health</div>
+    <button class="nb-btn" style="margin-top:8px" onclick="chooseDept('operations')">Choose Department</button>
   </div>
 </section>
-<section class="card-grid" style="grid-template-columns: 1fr 1fr;"> <div class="card"> <h3 style="margin:0 0 10px">Candidates by Department</h3> <canvas id="dept-cands" height="200"></canvas> </div> <div class="card"> <h3 style="margin:0 0 10px">Roles Viewed Trend</h3> <canvas id="roles-trend" height="200"></canvas> </div> </section>
 
-</main> <script src="https://cdn.jsdelivr.net/npm/chart.js"><script src="js/router.js"></script> <script src="js/state.js"></script> <script src="js/dashboard.js"></script> </body> </html>
+<!-- Analytics row -->
+<section class="card-grid" style="grid-template-columns: 1fr 1fr;">
+  <div class="card">
+    <h3 style="margin:0 0 10px">Candidates by Department</h3>
+    <canvas id="dept-cands" height="200"></canvas>
+  </div>
+  <div class="card">
+    <h3 style="margin:0 0 10px">Roles Viewed Trend</h3>
+    <canvas id="roles-trend" height="200"></canvas>
+  </div>
+</section>
 
+<!-- Mini analytics (mix + sparkline + leaderboard) -->
+<section class="mini-grid" style="margin-top:12px">
+  <div class="mini-card">
+    <div class="flex-split" style="justify-content:space-between">
+      <div>
+        <div class="muted">Candidate Mix</div>
+        <div style="font-weight:800;font-size:20px">Role Distribution</div>
+      </div>
+    </div>
+    <canvas id="mix-donut" height="180" style="margin-top:8px"></canvas>
+  </div>
+  <div class="mini-card">
+    <div class="muted">Daily Views</div>
+    <div style="font-weight:800;font-size:20px">Last 14 days</div>
+    <canvas id="views-spark" height="120" style="margin-top:8px"></canvas>
+  </div>
+  <div class="mini-card">
+    <div class="muted">Top Pipelines</div>
+    <div style="font-size:14px;margin-top:6px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+        <span class="nb-tag">Finance Manager</span><div class="progress"><span style="width:76%"></span></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+        <span class="nb-tag">Brand Manager</span><div class="progress"><span style="width:64%"></span></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span class="nb-tag">Operations Analyst</span><div class="progress"><span style="width:59%"></span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-
-
-
-
+<!-- Collapsible insights (static text for look only) -->
+<section style="margin-top:12px">
+  <details class="insights">
+    <summary>Insights & Recommendations (view only)</summary>
+    <ul style="margin:10px 0 0 18px; color:#cfd3e1">
+      <li>Finance Manager pipeline shows strong health; consider advancing top 3 shortlisted profiles.</li>
+      <li>Marketing has consistent views but lower shortlists; review must‑have criteria calibration.</li>
+      <li>Operations roles show steady inflow; maintain current sourcing channels.</li>
+    </ul>
+  </details>
+</section>
+</main> <!-- Scripts --> <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <script src="js/router.js"></script> <script src="js/state.js"></script> <script src="js/dashboard.js"></script> <script> // Initialize extra charts (view-only) (function initDashAdds(){ if (!window.Chart) return; // Dept candidates bar (keeping your existing ID) const deptEl = document.getElementById('dept-cands'); if (deptEl) new Chart(deptEl, { type:'bar', data:{ labels:['Finance','Marketing','Operations'], datasets:[{ data:, backgroundColor:['#EEAD0E','#00FFFF','#00FF41'] }] }, options:{ plugins:{legend:{display:false}}, scales:{ x:{ ticks:{color:'#cfd3e1'}}, y:{ ticks:{color:'#cfd3e1'}}}} }); // Roles viewed line const trendEl = document.getElementById('roles-trend'); if (trendEl) new Chart(trendEl, { type:'line', data:{ labels:['Mon','Tue','Wed','Thu','Fri','Sat','Sun'], datasets:[{ data:, borderColor:'#ffffff', backgroundColor:'rgba(255,255,255,.08)', fill:true, tension:.3 }] }, options:{ plugins:{legend:{display:false}}, scales:{ x:{ ticks:{color:'#cfd3e1'}}, y:{ ticks:{color:'#cfd3e1'}}}} }); // Mix donut const mix = document.getElementById('mix-donut'); if (mix) new Chart(mix, { type:'doughnut', data:{ labels:['Senior','Junior','Mid'], datasets:[{ data:, backgroundColor:['#EEAD0E','#00FFFF','#9D4EDD'], borderColor:'transparent' }] }, options:{ plugins:{legend:{labels:{color:'#cfd3e1'}}}, cutout:'62%' } }); // Sparkline views (thin area line) const spark = document.getElementById('views-spark'); if (spark) new Chart(spark, { type:'line', data:{ labels:Array.from({length:14}, (_,i)=>i+1+'d'), datasets:[{ data:, borderColor:'#00FFFF', backgroundColor:'rgba(0,255,255,.10)', fill:true, tension:.35, borderWidth:2, pointRadius:0 }] }, options:{ plugins:{legend:{display:false}}, scales:{ x:{ display:false }, y:{ display:false } } } }); })(); </script> </body> </html>
