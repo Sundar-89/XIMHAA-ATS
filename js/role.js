@@ -43,13 +43,6 @@ const url = 'viewer.html?dept=' + encodeURIComponent(dept) +
 '&role=' + encodeURIComponent(roleId) +
 '&candidate=' + encodeURIComponent(id);
 window.location.href = url;
-if (!c) return;
-
-const skills = (c.skills || []).map(s=>'<span class="tag">'+s+'</span>').join('');
-const strengths = (c.strengths || []).map(s=>'<span class="tag neutral">'+s+'</span>').join('');
-
-document.getElementById('modal-content').innerHTML = <h3 style="margin:0 0 8px">${c.name} <span class="pill">${c.seniority || ''}</span></h3> <p style="color:var(--muted)">${c.summary || ''}</p> <h4>Skills</h4> <div class="tags">${skills}</div> <h4>Strengths</h4> <div class="tags">${strengths}</div> <div class="justif" style="margin-top:10px"> <label>Justification</label> <textarea id="justif" rows="3" placeholder="Why this candidate? (min 15 chars)"></textarea> </div> <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:12px"> <button class="nb-btn" onclick="confirmSelect('${c.id}')">Shortlist</button> </div> ;
-UI.showModal('cand-modal');
 }
 
 function promptSelect(id){
@@ -87,3 +80,4 @@ document.querySelectorAll('.actions button').forEach(b => { b.disabled = true; b
 document.getElementById('timer').textContent = 'Time is up';
 
 }
+
