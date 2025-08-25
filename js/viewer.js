@@ -22,18 +22,19 @@ let vDept, vRoleId, vCandId, vRoleMeta = null, vCandidate = null;
 })();
 
 function renderResume(){
-  const pane = document.getElementById('resume-pane');
-  if (!pane || !vCandidate) return;
+const stage = document.getElementById('resume-stage');
+const pane = document.getElementById('resume-pane');
+if (!stage || !pane || !vCandidate) return;
 
-  // Get candidate index (1-5) from ID
-  const candidateIndex = vCandidate.id.slice(-2); // Gets "01", "02", etc.
-  const resumeNumber = candidateIndex.replace('0', ''); // "01" -> "1"
-  const resumePath = 'resumes/' + vRoleId + '/resume' + resumeNumber + '.jpg';
+// Map FIN-MGR-01 -> resume1.jpg, FIN-MGR-02 -> resume2.jpg, etc.
+const index2 = String(vCandidate.id || '').slice(-2); // '01'...'05'
+const num = parseInt(index2, 10) || 1;
+const resumePath = 'resumes/' + vRoleId + '/resume' + num + '.jpg';
 
-  pane.innerHTML = '<div class="resume-display">' +
-    '<img src="' + resumePath + '" alt="Resume of ' + vCandidate.name + '" class="resume-image" ' +
-    'onerror="this.src=\'resumes/placeholder.jpg\'; this.alt=\'Resume not found\';">' +
-  '</div>';
+pane.innerHTML = '<img class="resume-img" id="resume-img" src="' + resumePath + '" alt="Resume">';
+const img = document.getElementById('resume-img');
+img.onload = function(){ stage.classList.add('loaded'); };
+img.onerror = function(){ this.src = 'resumes/placeholder.jpg'; stage.classList.add('loaded'); };
 }
 
 function renderAnalytics(){
