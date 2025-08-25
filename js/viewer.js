@@ -6,7 +6,6 @@ vDept = q.get('dept') || 'finance';
 vRoleId = q.get('role');
 vCandId = q.get('candidate');
 
-// Title
 const titleEl = document.getElementById('viewer-title');
 if (titleEl) titleEl.textContent = 'Resume Viewer';
 
@@ -35,21 +34,15 @@ pane.innerHTML = <h3>${vCandidate.name} <span class="pill ${vCandidate.seniority
 function renderAnalytics(){
 if (!vCandidate || !vRoleMeta) return;
 
-// Must-haves
 const mh = XAnalytics.computeMustHaveCoverage(vCandidate.skills, vRoleMeta.mustHave);
 XAnalytics.renderMustHaveBadges('musthave-badges', vRoleMeta.mustHave, vCandidate.skills);
 
-// Seniority match
 const seniorityMatch = vRoleMeta.seniority ? ((vCandidate.seniority||'').toLowerCase() === vRoleMeta.seniority.toLowerCase() ? 1 : 0.6) : 1;
-
-// Extras: rough proxy from strengths count
 const extrasPct = Math.min(100, (vCandidate.strengths||[]).length * 15);
 
-// Fit score and gauge animate
 const fit = XAnalytics.computeFitScore({ mustHavePct: mh.pct, seniorityMatch, extrasPct });
 XAnalytics.animateGaugeTo(fit);
 
-// Radar: use must-haves as labels; mark 5 if present else 2
 const labels = (vRoleMeta.mustHave||[]).map(x=>x.split(' '));
 const values = labels.map(lbl=>{
 const has = (vCandidate.skills||[]).some(s=>s.toLowerCase().includes(lbl.toLowerCase()));
