@@ -56,6 +56,13 @@ function renderAnalytics(){
     return has ? 5 : 2;
   });
   XAnalytics.renderSkillRadar('skill-radar', labels, values);
+  
+  const niceList = (vRoleMeta.niceToHave || []);
+  const niceVals = niceList.map(n => {
+	const has = (vCandidate.skills || []).some(s => s.toLowerCase().includes(n.toLowerCase().replace(/[()]/g,'')));
+	return has ? 100 : 30;
+  });
+  XAnalytics.renderNiceBar('nice-bar', niceList, niceVals);
 }
 
 function shortlistFromViewer(){
