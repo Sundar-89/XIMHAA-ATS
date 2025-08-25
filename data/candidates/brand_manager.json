@@ -1,0 +1,42 @@
+[
+  {
+    "id": "BRD-MGR-01",
+    "name": "Brand Manager Candidate 1",
+    "seniority": "Senior",
+    "summary": "Experienced brand manager with strong strategy and consumer insights background.",
+    "skills": ["Brand Strategy", "ATL/BTL", "Consumer Insights", "Market Research", "Campaign Management", "Brand Positioning"],
+    "strengths": ["Strategic thinking", "Creative leadership", "Market understanding"]
+  },
+  {
+    "id": "BRD-MGR-02",
+    "name": "Brand Manager Candidate 2",
+    "seniority": "Senior",
+    "summary": "Senior brand professional with comprehensive brand building and NPD experience.",
+    "skills": ["Brand Building", "NPD Collaboration", "P&L Management", "Consumer Research", "Brand Guidelines"],
+    "strengths": ["Business acumen", "Innovation", "Cross-functional collaboration"]
+  },
+  {
+    "id": "BRD-MGR-03",
+    "name": "Brand Manager Candidate 3",
+    "seniority": "Senior",
+    "summary": "Brand specialist with strong ATL/BTL campaign management and insights experience.",
+    "skills": ["Campaign Management", "ATL/BTL", "Consumer Insights", "Brand Metrics", "Media Planning"],
+    "strengths": ["Campaign execution", "Data-driven", "Media expertise"]
+  },
+  {
+    "id": "BRD-MGR-04",
+    "name": "Brand Manager Candidate 4",
+    "seniority": "Senior",
+    "summary": "Experienced in brand strategy development and consumer-focused marketing initiatives.",
+    "skills": ["Brand Strategy", "Consumer Marketing", "Brand Positioning", "Market Analysis", "Creative Development"],
+    "strengths": ["Strategic planning", "Consumer focus", "Creative direction"]
+  },
+  {
+    "id": "BRD-MGR-05",
+    "name": "Brand Manager Candidate 5",
+    "seniority": "Senior",
+    "summary": "Brand management professional with strong P&L awareness and NPD collaboration.",
+    "skills": ["Brand Management", "P&L Awareness", "NPD Collaboration", "Brand Strategy", "Consumer Insights"],
+    "strengths": ["Business results", "Innovation support", "Strategic thinking"]
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "OPS-ANL-01",
+    "name": "Operations Analyst Candidate 1",
+    "seniority": "Junior",
+    "summary": "Operations analyst with strong data analysis and dashboard creation experience.",
+    "skills": ["Data Analysis", "Dashboards (Excel/BI)", "Process Mapping", "Performance Metrics", "SQL", "Reporting"],
+    "strengths": ["Data analysis", "Dashboard creation", "Process improvement"]
+  },
+  {
+    "id": "OPS-ANL-02",
+    "name": "Operations Analyst Candidate 2",
+    "seniority": "Junior",
+    "summary": "Junior operations analyst with experience in process mapping and lean basics.",
+    "skills": ["Process Mapping", "Lean Basics", "Data Analysis", "Excel Advanced", "Performance Tracking", "Root Cause Analysis"],
+    "strengths": ["Process optimization", "Lean methodology", "Analytical thinking"]
+  },
+  {
+    "id": "OPS-ANL-03",
+    "name": "Operations Analyst Candidate 3",
+    "seniority": "Junior",
+    "summary": "Operations analyst with focus on SQL and business intelligence dashboards.",
+    "skills": ["SQL", "Business Intelligence", "Data Visualization", "Process Analysis", "KPI Development", "Reporting Automation"],
+    "strengths": ["SQL expertise", "BI tools", "Automation"]
+  },
+  {
+    "id": "OPS-ANL-04",
+    "name": "Operations Analyst Candidate 4",
+    "seniority": "Junior",
+    "summary": "Analyst with expertise in process mapping and performance dashboard development.",
+    "skills": ["Process Mapping", "Dashboard Development", "Data Analysis", "Excel/BI", "Performance Analysis", "Continuous Improvement"],
+    "strengths": ["Process documentation", "Dashboard design", "Performance tracking"]
+  },
+  {
+    "id": "OPS-ANL-05",
+    "name": "Operations Analyst Candidate 5",
+    "seniority": "Junior",
+    "summary": "Operations analysis professional with strong data analysis and lean basics.",
+    "skills": ["Data Analysis", "Lean Basics", "Process Improvement", "Excel Advanced", "SQL", "Operational Metrics"],
+    "strengths": ["Data-driven insights", "Process improvement", "Operational excellence"]
+  }
+]

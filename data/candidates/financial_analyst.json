@@ -1,0 +1,42 @@
+[
+  {
+    "id": "FIN-ANL-01",
+    "name": "Financial Analyst Candidate 1",
+    "seniority": "Junior",
+    "summary": "Financial analyst with strong forecasting and variance analysis experience.",
+    "skills": ["Forecasting", "Variance Analysis", "Power BI", "Excel Advanced", "Financial Modeling", "Data Analysis"],
+    "strengths": ["Analytical thinking", "Attention to detail", "Quick learner"]
+  },
+  {
+    "id": "FIN-ANL-02", 
+    "name": "Financial Analyst Candidate 2",
+    "seniority": "Junior",
+    "summary": "Junior analyst with experience in budget analysis and monthly reporting.",
+    "skills": ["Budget Analysis", "Monthly Reporting", "Excel", "Variance Analysis", "Trend Analysis", "KPI Tracking"],
+    "strengths": ["Process-oriented", "Reliable", "Communication"]
+  },
+  {
+    "id": "FIN-ANL-03",
+    "name": "Financial Analyst Candidate 3", 
+    "seniority": "Junior",
+    "summary": "Financial analyst with focus on pricing analysis and profitability modeling.",
+    "skills": ["Pricing Analysis", "Profitability Modeling", "Excel", "SQL", "Financial Planning", "Cost Analysis"],
+    "strengths": ["Problem-solving", "Technical skills", "Business acumen"]
+  },
+  {
+    "id": "FIN-ANL-04",
+    "name": "Financial Analyst Candidate 4",
+    "seniority": "Junior", 
+    "summary": "Analyst with strong financial planning and scenario modeling capabilities.",
+    "skills": ["Financial Planning", "Scenario Modeling", "Forecasting", "Power BI", "Excel", "Data Visualization"],
+    "strengths": ["Strategic thinking", "Data-driven", "Collaborative"]
+  },
+  {
+    "id": "FIN-ANL-05",
+    "name": "Financial Analyst Candidate 5",
+    "seniority": "Junior",
+    "summary": "Junior analyst with experience in variance reporting and dashboard creation.",
+    "skills": ["Variance Reporting", "Dashboard Creation", "Excel", "Power BI", "Trend Analysis", "Financial Reporting"],
+    "strengths": ["Detail-oriented", "Visual presentation", "Team player"]
+  }
+]

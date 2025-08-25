@@ -1,0 +1,42 @@
+[
+  {
+    "id": "FIN-MGR-01",
+    "name": "Finance Manager Candidate 1",
+    "seniority": "Senior",
+    "summary": "Experienced finance manager with strong FP&A and cost control background.",
+    "skills": ["FP&A", "Cost Control", "ERP SAP", "MIS", "Pricing", "Stakeholder Mgmt"],
+    "strengths": ["Ownership", "Structured thinker", "Cross-functional"]
+  },
+  {
+    "id": "FIN-MGR-02",
+    "name": "Finance Manager Candidate 2",
+    "seniority": "Senior",
+    "summary": "Senior finance professional with comprehensive planning and costing experience.",
+    "skills": ["Budgeting", "Manufacturing Costing", "ERP Oracle", "Forecasting", "Variance Analysis"],
+    "strengths": ["Analytical", "Calm under pressure", "Team coaching"]
+  },
+  {
+    "id": "FIN-MGR-03",
+    "name": "Finance Manager Candidate 3",
+    "seniority": "Senior",
+    "summary": "Finance leader with focus on pricing, margins and business intelligence.",
+    "skills": ["Pricing", "Margins", "Power BI", "Scenario Modeling", "Excel Advanced"],
+    "strengths": ["Data-driven", "Attention to detail", "Strategic thinking"]
+  },
+  {
+    "id": "FIN-MGR-04",
+    "name": "Finance Manager Candidate 4",
+    "seniority": "Senior",
+    "summary": "Finance specialist with strong cost control and operational partnership.",
+    "skills": ["Cost Control", "Plant Finance", "ERP SAP", "Throughput", "Variance"],
+    "strengths": ["Collaborative", "Pragmatic", "Results-oriented"]
+  },
+  {
+    "id": "FIN-MGR-05",
+    "name": "Finance Manager Candidate 5",
+    "seniority": "Senior",
+    "summary": "Finance manager with expertise in budgeting and MIS improvement.",
+    "skills": ["Budgeting", "Rolling Forecasts", "MIS", "Stakeholder Mgmt", "Excel"],
+    "strengths": ["Clear communication", "Process-oriented", "Leadership"]
+  }
+]

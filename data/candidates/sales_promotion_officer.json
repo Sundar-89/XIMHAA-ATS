@@ -1,0 +1,42 @@
+[
+  {
+    "id": "SLS-PRO-01",
+    "name": "Sales & Promotion Officer Candidate 1",
+    "seniority": "Junior",
+    "summary": "Sales and promotion officer with strong field activation and distributor coordination experience.",
+    "skills": ["Field Activations", "Distributor Coordination", "Trade Schemes", "Merchandising", "Sales Support", "Market Execution"],
+    "strengths": ["Field execution", "Relationship building", "Trade management"]
+  },
+  {
+    "id": "SLS-PRO-02",
+    "name": "Sales & Promotion Officer Candidate 2",
+    "seniority": "Junior",
+    "summary": "Junior sales professional with experience in trade schemes and merchandising.",
+    "skills": ["Trade Schemes", "Merchandising", "Retail Execution", "Distributor Management", "Promotion Planning", "Market Coverage"],
+    "strengths": ["Trade expertise", "Merchandising", "Market knowledge"]
+  },
+  {
+    "id": "SLS-PRO-03",
+    "name": "Sales & Promotion Officer Candidate 3",
+    "seniority": "Junior",
+    "summary": "Sales and promotion specialist with focus on field activations and market execution.",
+    "skills": ["Field Activations", "Market Execution", "Promotion Campaigns", "Trade Marketing", "Distributor Relations", "Sales Analytics"],
+    "strengths": ["Field management", "Campaign execution", "Analytics"]
+  },
+  {
+    "id": "SLS-PRO-04",
+    "name": "Sales & Promotion Officer Candidate 4",
+    "seniority": "Junior",
+    "summary": "Promotion officer with expertise in distributor coordination and trade management.",
+    "skills": ["Distributor Coordination", "Trade Management", "Sales Promotion", "Market Development", "Channel Management", "Merchandising"],
+    "strengths": ["Distributor relations", "Trade development", "Channel expertise"]
+  },
+  {
+    "id": "SLS-PRO-05",
+    "name": "Sales & Promotion Officer Candidate 5",
+    "seniority": "Junior",
+    "summary": "Sales and promotion professional with strong trade schemes and field activation skills.",
+    "skills": ["Trade Schemes", "Field Activations", "Promotion Execution", "Market Intelligence", "Distributor Support", "Sales Operations"],
+    "strengths": ["Promotion planning", "Market intelligence", "Operational excellence"]
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "TAX-CON-01",
+    "name": "Tax Consultant Candidate 1",
+    "seniority": "Junior",
+    "summary": "Tax consultant with strong GST compliance and TDS management experience.",
+    "skills": ["GST Compliance", "TDS Management", "Tax Filings", "Reconciliations", "ERP SAP", "Compliance Reporting"],
+    "strengths": ["Compliance focus", "Accuracy", "Process adherence"]
+  },
+  {
+    "id": "TAX-CON-02",
+    "name": "Tax Consultant Candidate 2",
+    "seniority": "Junior", 
+    "summary": "Junior tax professional with experience in direct and indirect tax compliance.",
+    "skills": ["Direct Tax", "Indirect Tax", "Statutory Filings", "Tax Audits", "Compliance Management", "Documentation"],
+    "strengths": ["Detail-oriented", "Regulatory knowledge", "Time management"]
+  },
+  {
+    "id": "TAX-CON-03",
+    "name": "Tax Consultant Candidate 3",
+    "seniority": "Junior",
+    "summary": "Tax consultant with focus on GST reconciliation and compliance reporting.",
+    "skills": ["GST Reconciliation", "Compliance Reporting", "Manufacturing Tax", "ERP Oracle", "Tax Planning", "Documentation"],
+    "strengths": ["Systematic approach", "Industry knowledge", "Problem-solving"]
+  },
+  {
+    "id": "TAX-CON-04", 
+    "name": "Tax Consultant Candidate 4",
+    "seniority": "Junior",
+    "summary": "Tax professional with experience in TDS, GST, and income tax compliance.",
+    "skills": ["TDS Compliance", "GST Filings", "Income Tax", "Corporate Tax", "Tax Calculations", "Audit Support"],
+    "strengths": ["Client handling", "Tax expertise", "Coordination"]
+  },
+  {
+    "id": "TAX-CON-05",
+    "name": "Tax Consultant Candidate 5",
+    "seniority": "Junior",
+    "summary": "Junior tax professional with strong compliance management experience.",
+    "skills": ["Tax Compliance", "Reconciliations", "GST Returns", "TDS Returns", "ERP Integration", "Report Generation"],
+    "strengths": ["Compliance mindset", "Accuracy", "Learning agility"]
+  }
+]

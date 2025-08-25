@@ -1,0 +1,42 @@
+[
+  {
+    "id": "QC-OFF-01",
+    "name": "Quality Control Officer Candidate 1",
+    "seniority": "Junior",
+    "summary": "Quality control officer with strong QA/QC testing and HACCP knowledge.",
+    "skills": ["QA/QC Tests", "HACCP/FSMS Basics", "FSSAI/ISO Awareness", "Quality Audits", "Food Safety", "Documentation"],
+    "strengths": ["Quality testing", "Food safety", "Audit readiness"]
+  },
+  {
+    "id": "QC-OFF-02",
+    "name": "Quality Control Officer Candidate 2",
+    "seniority": "Junior",
+    "summary": "Junior quality professional with experience in FSSAI compliance and ISO standards.",
+    "skills": ["FSSAI Compliance", "ISO Standards", "Quality Testing", "Food Safety Management", "Audit Support", "Process Documentation"],
+    "strengths": ["Compliance focus", "Standards knowledge", "Process adherence"]
+  },
+  {
+    "id": "QC-OFF-03",
+    "name": "Quality Control Officer Candidate 3",
+    "seniority": "Junior",
+    "summary": "Quality control specialist with focus on HACCP and audit readiness.",
+    "skills": ["HACCP Implementation", "Audit Readiness", "Quality Systems", "Food Safety Protocols", "Testing Procedures", "Non-conformance Management"],
+    "strengths": ["HACCP expertise", "Audit preparation", "System implementation"]
+  },
+  {
+    "id": "QC-OFF-04",
+    "name": "Quality Control Officer Candidate 4",
+    "seniority": "Junior",
+    "summary": "Quality officer with expertise in QA/QC testing and quality management systems.",
+    "skills": ["QA/QC Testing", "Quality Management", "ISO Awareness", "Food Safety", "Quality Documentation", "Corrective Actions"],
+    "strengths": ["Testing expertise", "Quality systems", "Documentation"]
+  },
+  {
+    "id": "QC-OFF-05",
+    "name": "Quality Control Officer Candidate 5",
+    "seniority": "Junior",
+    "summary": "Quality control professional with strong FSSAI and food safety management skills.",
+    "skills": ["FSSAI Standards", "Food Safety Management", "Quality Testing", "HACCP Basics", "Audit Support", "Quality Reporting"],
+    "strengths": ["Food safety", "Standards compliance", "Quality reporting"]
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "SUP-CHN-01",
+    "name": "Supply Chain Manager Candidate 1",
+    "seniority": "Senior",
+    "summary": "Experienced supply chain manager with strong demand planning and S&OP expertise.",
+    "skills": ["Demand Planning", "S&OP", "Inventory & Logistics", "Supply Chain Optimization", "Cold Chain", "Vendor Management"],
+    "strengths": ["Demand forecasting", "Process optimization", "Vendor relations"]
+  },
+  {
+    "id": "SUP-CHN-02",
+    "name": "Supply Chain Manager Candidate 2",
+    "seniority": "Senior",
+    "summary": "Senior supply chain professional with comprehensive inventory and logistics experience.",
+    "skills": ["Inventory Management", "Logistics", "Service Levels", "Supply Planning", "Warehouse Management", "Distribution"],
+    "strengths": ["Inventory optimization", "Service excellence", "Logistics expertise"]
+  },
+  {
+    "id": "SUP-CHN-03",
+    "name": "Supply Chain Manager Candidate 3",
+    "seniority": "Senior",
+    "summary": "Supply chain manager with focus on cold chain and service level management.",
+    "skills": ["Cold Chain Management", "Service Levels", "Distribution", "Inventory Control", "Supply Planning", "Quality Assurance"],
+    "strengths": ["Cold chain expertise", "Service delivery", "Quality focus"]
+  },
+  {
+    "id": "SUP-CHN-04",
+    "name": "Supply Chain Manager Candidate 4",
+    "seniority": "Senior",
+    "summary": "Supply chain leader with expertise in S&OP and demand planning.",
+    "skills": ["S&OP", "Demand Planning", "Inventory Optimization", "Supply Chain Analytics", "Procurement", "Logistics Coordination"],
+    "strengths": ["S&OP excellence", "Analytics", "Cross-functional collaboration"]
+  },
+  {
+    "id": "SUP-CHN-05",
+    "name": "Supply Chain Manager Candidate 5",
+    "seniority": "Senior",
+    "summary": "Supply chain management professional with strong inventory and logistics focus.",
+    "skills": ["Inventory & Logistics", "Supply Chain Strategy", "Demand Management", "Service Optimization", "Cold Chain", "Cost Management"],
+    "strengths": ["Strategic planning", "Cost optimization", "Service excellence"]
+  }
+]

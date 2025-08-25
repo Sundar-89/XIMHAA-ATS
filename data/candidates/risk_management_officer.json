@@ -1,0 +1,42 @@
+[
+  {
+    "id": "RISK-MGR-01",
+    "name": "Risk Management Officer Candidate 1",
+    "seniority": "Senior",
+    "summary": "Experienced risk management professional with strong operational risk background.",
+    "skills": ["Operational Risk", "Internal Controls", "Audit Liaison", "SOX Compliance", "Risk Assessment", "Process Mapping"],
+    "strengths": ["Detail-oriented", "Regulatory knowledge", "Cross-functional collaboration"]
+  },
+  {
+    "id": "RISK-MGR-02",
+    "name": "Risk Management Officer Candidate 2",
+    "seniority": "Senior",
+    "summary": "Senior risk management specialist with comprehensive control framework experience.",
+    "skills": ["ISO 31000", "Risk Monitoring", "Internal Controls", "Compliance Framework", "Audit Management"],
+    "strengths": ["Analytical mindset", "Process improvement", "Strategic thinking"]
+  },
+  {
+    "id": "RISK-MGR-03",
+    "name": "Risk Management Officer Candidate 3",
+    "seniority": "Senior",
+    "summary": "Risk officer with strong operational controls and compliance background.",
+    "skills": ["Vendor Risk", "Operational Risk", "Regulatory Compliance", "Control Testing", "Risk Reporting"],
+    "strengths": ["Risk assessment", "Communication", "Problem-solving"]
+  },
+  {
+    "id": "RISK-MGR-04",
+    "name": "Risk Management Officer Candidate 4",
+    "seniority": "Senior",
+    "summary": "Experienced in risk assessment projects and internal audit coordination.",
+    "skills": ["Risk Assessment", "Internal Controls", "Audit Coordination", "Control Documentation", "Compliance"],
+    "strengths": ["Documentation", "Systematic approach", "Team coordination"]
+  },
+  {
+    "id": "RISK-MGR-05",
+    "name": "Risk Management Officer Candidate 5",
+    "seniority": "Senior",
+    "summary": "Risk management specialist with strong regulatory liaison experience.",
+    "skills": ["Operational Controls", "Regulatory Liaison", "Risk Mitigation", "Internal Audit", "Policy Development"],
+    "strengths": ["Regulatory knowledge", "Risk mitigation", "Policy expertise"]
+  }
+]

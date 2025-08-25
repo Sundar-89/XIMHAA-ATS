@@ -1,0 +1,42 @@
+[
+  {
+    "id": "OPS-MGR-01",
+    "name": "Operations Manager Candidate 1",
+    "seniority": "Senior",
+    "summary": "Experienced operations manager with strong production planning and OEE optimization expertise.",
+    "skills": ["Production Planning", "OEE/Throughput", "Safety & Quality", "Manufacturing Excellence", "Cost Reduction", "Team Leadership"],
+    "strengths": ["Production optimization", "Safety focus", "Leadership"]
+  },
+  {
+    "id": "OPS-MGR-02",
+    "name": "Operations Manager Candidate 2",
+    "seniority": "Senior",
+    "summary": "Senior operations professional with comprehensive safety, quality and ERP experience.",
+    "skills": ["Safety Management", "Quality Systems", "ERP", "Production Control", "Process Improvement", "Cost Management"],
+    "strengths": ["Safety leadership", "Quality excellence", "Process improvement"]
+  },
+  {
+    "id": "OPS-MGR-03",
+    "name": "Operations Manager Candidate 3",
+    "seniority": "Senior",
+    "summary": "Operations manager with focus on throughput optimization and cost reduction.",
+    "skills": ["Throughput Optimization", "Cost Reduction", "Production Planning", "OEE", "Manufacturing Systems", "Performance Management"],
+    "strengths": ["Efficiency optimization", "Cost management", "Performance tracking"]
+  },
+  {
+    "id": "OPS-MGR-04",
+    "name": "Operations Manager Candidate 4",
+    "seniority": "Senior",
+    "summary": "Operations leader with expertise in production planning and quality management.",
+    "skills": ["Production Planning", "Quality Management", "Safety Systems", "Manufacturing Excellence", "ERP Systems", "Team Development"],
+    "strengths": ["Planning excellence", "Quality systems", "Team building"]
+  },
+  {
+    "id": "OPS-MGR-05",
+    "name": "Operations Manager Candidate 5",
+    "seniority": "Senior",
+    "summary": "Operations management professional with strong OEE and cost reduction focus.",
+    "skills": ["OEE Management", "Cost Reduction", "Production Systems", "Safety & Quality", "Process Optimization", "Manufacturing Strategy"],
+    "strengths": ["OEE expertise", "Cost optimization", "Strategic thinking"]
+  }
+]

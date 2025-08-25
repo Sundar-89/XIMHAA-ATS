@@ -1,0 +1,42 @@
+[
+  {
+    "id": "DIG-MKT-01",
+    "name": "Digital Marketing Executive Candidate 1",
+    "seniority": "Junior",
+    "summary": "Digital marketing executive with strong SEO/SEM and paid advertising experience.",
+    "skills": ["SEO/SEM", "Google Ads", "Meta Ads", "Content Calendar", "Analytics", "Campaign Management"],
+    "strengths": ["Digital expertise", "Campaign optimization", "Data analysis"]
+  },
+  {
+    "id": "DIG-MKT-02",
+    "name": "Digital Marketing Executive Candidate 2",
+    "seniority": "Junior",
+    "summary": "Junior digital marketer with experience in content calendar and email automation.",
+    "skills": ["Content Calendar", "Email Automation", "Social Media", "Google Ads", "Content Creation", "CRO Basics"],
+    "strengths": ["Content planning", "Automation", "Creative thinking"]
+  },
+  {
+    "id": "DIG-MKT-03",
+    "name": "Digital Marketing Executive Candidate 3",
+    "seniority": "Junior",
+    "summary": "Digital marketing professional with focus on paid advertising and CRO.",
+    "skills": ["Paid Advertising", "CRO Basics", "Google Ads", "Meta Ads", "Landing Pages", "A/B Testing"],
+    "strengths": ["Performance marketing", "Conversion optimization", "Testing mindset"]
+  },
+  {
+    "id": "DIG-MKT-04",
+    "name": "Digital Marketing Executive Candidate 4",
+    "seniority": "Junior",
+    "summary": "Digital marketer with expertise in SEO/SEM and content calendar management.",
+    "skills": ["SEO/SEM", "Content Calendar", "Social Media Marketing", "Email Marketing", "Analytics", "Content Strategy"],
+    "strengths": ["SEO expertise", "Content strategy", "Multi-channel approach"]
+  },
+  {
+    "id": "DIG-MKT-05",
+    "name": "Digital Marketing Executive Candidate 5",
+    "seniority": "Junior",
+    "summary": "Junior digital marketing executive with strong Google/Meta advertising skills.",
+    "skills": ["Google Ads", "Meta Ads", "Email Automation", "Content Creation", "Performance Tracking", "CRO"],
+    "strengths": ["Paid media", "Automation setup", "Performance tracking"]
+  }
+]

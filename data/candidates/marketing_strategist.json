@@ -1,0 +1,42 @@
+[
+  {
+    "id": "MKT-STR-01",
+    "name": "Marketing Strategist Candidate 1",
+    "seniority": "Senior",
+    "summary": "Experienced marketing strategist with strong segmentation and positioning expertise.",
+    "skills": ["Segmentation", "Positioning", "GTM Planning", "Market Research", "Strategy Development", "Competitive Analysis"],
+    "strengths": ["Strategic thinking", "Market analysis", "Go-to-market planning"]
+  },
+  {
+    "id": "MKT-STR-02",
+    "name": "Marketing Strategist Candidate 2",
+    "seniority": "Senior",
+    "summary": "Senior strategist with comprehensive research synthesis and ROI modeling experience.",
+    "skills": ["Research Synthesis", "ROI Modeling", "Market Strategy", "Consumer Insights", "Business Planning"],
+    "strengths": ["Data synthesis", "Financial modeling", "Strategic planning"]
+  },
+  {
+    "id": "MKT-STR-03",
+    "name": "Marketing Strategist Candidate 3",
+    "seniority": "Senior",
+    "summary": "Marketing strategist with focus on GTM planning and competitive positioning.",
+    "skills": ["GTM Planning", "Competitive Positioning", "Market Entry", "Segmentation", "Brand Strategy"],
+    "strengths": ["Market entry", "Competitive analysis", "Strategic execution"]
+  },
+  {
+    "id": "MKT-STR-04",
+    "name": "Marketing Strategist Candidate 4",
+    "seniority": "Senior",
+    "summary": "Strategist with expertise in positioning and comprehensive market research.",
+    "skills": ["Market Positioning", "Market Research", "Consumer Behavior", "Strategy Framework", "ROI Analysis"],
+    "strengths": ["Consumer insights", "Research methodology", "Strategic frameworks"]
+  },
+  {
+    "id": "MKT-STR-05",
+    "name": "Marketing Strategist Candidate 5",
+    "seniority": "Senior",
+    "summary": "Marketing strategy professional with strong segmentation and GTM expertise.",
+    "skills": ["Market Segmentation", "GTM Strategy", "Positioning", "Research Analysis", "Business Strategy"],
+    "strengths": ["Segmentation expertise", "Launch planning", "Business acumen"]
+  }
+]
