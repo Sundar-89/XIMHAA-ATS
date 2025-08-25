@@ -1,3 +1,4 @@
+window.XAnalytics = window.XAnalytics || {};
 function computeMustHaveCoverage(candidateSkills, mustHave){
 const cset = new Set((candidateSkills||[]).map(s=>s.toLowerCase()));
 const m = (mustHave||[]).map(s=>s.toLowerCase().replace(/[()]/g,''));
@@ -93,3 +94,4 @@ animation: { duration: 900, easing: 'easeOutQuart' }
 }
 if (!window.XAnalytics) window.XAnalytics = {};
 window.XAnalytics.renderNiceBar = renderNiceBar;
+
