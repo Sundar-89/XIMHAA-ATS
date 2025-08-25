@@ -59,3 +59,20 @@ new Chart(ctx, { type:'radar', data, options: { responsive:true, plugins:{legend
 }
 
 window.XAnalytics = { computeMustHaveCoverage, computeFitScore, animateGaugeTo, renderMustHaveBadges, renderSkillRadar };
+function renderNiceBar(canvasId, labels, values){
+const el = document.getElementById(canvasId);
+if (!el || !window.Chart) return;
+new Chart(el, {
+type: 'bar',
+data: { labels, datasets: [{ data: values, backgroundColor: '#0aa0ff' }] },
+options: {
+responsive: true,
+indexAxis: 'y',
+scales: { x: { min:0, max:100, ticks:{ color:'#cfd3e1' } }, y:{ ticks:{ color:'#cfd3e1' } } },
+plugins: { legend:{ display:false } },
+animation: { duration: 900, easing: 'easeOutQuart' }
+}
+});
+}
+if (!window.XAnalytics) window.XAnalytics = {};
+window.XAnalytics.renderNiceBar = renderNiceBar;
