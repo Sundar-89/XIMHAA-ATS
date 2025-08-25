@@ -50,3 +50,40 @@ repeating-linear-gradient(45deg, rgba(255,255,255,.02) 0 2px, transparent 2px 6p
 .modal-body-full{width:96vw;max-width:none}
 .resume-full-img{max-width:95vw;max-height:90vh;object-fit:contain;display:block;margin:0 auto}
 #fit-score{font-weight:800;font-size:22px}
+.resume-top { margin-bottom: 12px; }
+.resume-stage { position: relative; background: #0c0e21; border-radius: 12px; border: 1px solid rgba(0,255,255,.25); overflow: hidden; }
+
+/* Make resume fit in top half so analytics is visible without scroll */
+.resume-img { width: 100%; max-height: 48vh; object-fit: contain; display: block; cursor: zoom-in; }
+
+/* Compact analytics so it fits under the resume on most screens */
+.analytics-bottom .analytics-card { background: var(--surface); border: 1px solid rgba(255,255,255,.06); border-radius: 12px; box-shadow: var(--shadow); padding: 12px; }
+.analytics-bottom .chart-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 8px; }
+.chart-card { background: #0c0e21; border: 1px solid rgba(255,255,255,.06); border-radius: 10px; padding: 8px; position: relative; overflow: hidden; }
+
+/* Slightly reduce chart heights for the tighter layout */
+#skill-radar { height: 160px !important; }
+#nice-bar { height: 120px !important; }
+
+/* Keep analytics panels visually rich even when sparse data */
+.chart-with-overlay .chart-overlay { content:""; position:absolute; inset:0;
+background:
+radial-gradient(ellipse at top left, rgba(0,255,255,.06), transparent 60%),
+radial-gradient(ellipse at bottom right, rgba(238,173,14,.06), transparent 60%),
+repeating-linear-gradient(45deg, rgba(255,255,255,.02) 0 2px, transparent 2px 6px);
+pointer-events:none;
+}
+
+/* Optional: tighten further on smaller screens */
+@media (max-width: 1200px) {
+.resume-img { max-height: 44vh; }
+}
+@media (max-width: 992px) {
+.resume-img { max-height: 40vh; }
+.analytics-bottom .chart-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+.resume-img { max-height: 36vh; }
+.analytics-bottom .chart-grid { grid-template-columns: 1fr; }
+}
+
