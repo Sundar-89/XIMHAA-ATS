@@ -1,14 +1,13 @@
 function computeMustHaveCoverage(candidateSkills, mustHave){
 const cset = new Set((candidateSkills||[]).map(s=>s.toLowerCase()));
-const m = (mustHave||[]).map(s=>s.toLowerCase());
+const m = (mustHave||[]).map(s=>s.toLowerCase().replace(/[()]/g,''));
 let hits = 0;
-m.forEach(req=>{ if (Array.from(cset).some(s=>s.includes(req.replace(/[()]/g,'')))) hits++; });
+m.forEach(req=>{ if (Array.from(cset).some(s=>s.includes(req))) hits++; });
 const pct = m.length ? Math.round((hits/m.length)*100) : 0;
 return { hits, total: m.length, pct };
 }
 
 function computeFitScore({ mustHavePct=0, seniorityMatch=1, extrasPct=0 }){
-// Simple weighted model: 70% must-haves, 20% seniority match, 10% extras
 const score = Math.round((mustHavePct0.7) + (seniorityMatch1000.2) + (extrasPct0.1));
 return Math.max(0, Math.min(100, score));
 }
@@ -19,7 +18,6 @@ if (needle) needle.style.transform = 'rotate(' + deg + 'deg)';
 }
 
 function animateGaugeTo(score){
-// Map 0–100 → 0–180 deg
 const target = Math.round((score/100)*180);
 let cur = 0;
 const id = setInterval(()=>{
@@ -36,7 +34,8 @@ const el = document.getElementById(containerId);
 if (!el) return;
 const cset = new Set((candidateSkills||[]).map(s=>s.toLowerCase()));
 el.innerHTML = (mustHave||[]).map(req=>{
-const ok = Array.from(cset).some(s=>s.includes(req.toLowerCase().replace(/[()]/g,'')));
+const norm = req.toLowerCase().replace(/[()]/g,'');
+const ok = Array.from(cset).some(s=>s.includes(norm));
 return '<span class="tag" style="border-color:'+ (ok?'#7dff9c':'#ff7d7d') +'">'+ req +'</span>';
 }).join('');
 }
@@ -60,4 +59,3 @@ new Chart(ctx, { type:'radar', data, options: { responsive:true, plugins:{legend
 }
 
 window.XAnalytics = { computeMustHaveCoverage, computeFitScore, animateGaugeTo, renderMustHaveBadges, renderSkillRadar };
-
