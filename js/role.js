@@ -26,31 +26,50 @@ XTimer.startTimer(
 
 function renderCandidates(){
 const grid = document.getElementById('cand-grid');
+if (!grid) return;
+
 if (!candidates || candidates.length === 0) {
 grid.innerHTML = '<div class="card">No candidates configured for this role.</div>';
 return;
 }
 
 const cards = candidates.map(c => {
-const skills = (c.skills || []).slice(0, 6).map(s => <span class="tag">${s}</span>).join('');
-const strengths = (c.strengths || []).slice(0, 4).map(s => <span class="tag neutral">${s}</span>).join('');
-return <div class="cand-card" data-id="${c.id}"> <div class="cand-head"> <h3>${c.name}</h3> <span class="pill ${c.seniority==='Senior' ? 'senior' : 'junior'}">${c.seniority || ''}</span> </div> <p class="summary">${c.summary || ''}</p> <div class="tags">${skills}</div> <div class="tags">${strengths}</div> <div class="actions"> <button class="nb-btn js-view" data-id="${c.id}">View</button> <button class="nb-btn-outline js-select" data-id="${c.id}">Select</button> </div> </div> ;
+const skills = (c.skills || []).slice(0, 6).map(s => '<span class="tag">' + s + '</span>').join('');
+const strengths = (c.strengths || []).slice(0, 4).map(s => '<span class="tag neutral">' + s + '</span>').join('');
+return (
+'<div class="cand-card" data-id="' + c.id + '">' +
+'<div class="cand-head">' +
+'<h3>' + c.name + '</h3>' +
+'<span class="pill ' + (c.seniority==='Senior' ? 'senior' : 'junior') + '">' + (c.seniority || '') + '</span>' +
+'</div>' +
+'<p class="summary">' + (c.summary || '') + '</p>' +
+'<div class="tags">' + skills + '</div>' +
+'<div class="tags">' + strengths + '</div>' +
+'<div class="actions">' +
+'<button class="nb-btn js-view" data-id="' + c.id + '">View</button>' +
+'<button class="nb-btn-outline js-select" data-id="' + c.id + '">Select</button>' +
+'</div>' +
+'</div>'
+);
 }).join('');
 
 grid.innerHTML = cards;
 
-// Event delegation to avoid inline onclick quoting issues
-grid.addEventListener('click', (e) => {
+// Event delegation (attach once)
+grid.addEventListener('click', onGridClick, { once: true });
+}
+
+function onGridClick(e){
 const btn = e.target.closest('button');
 if (!btn) return;
 const id = btn.getAttribute('data-id');
 if (!id) return;
+
 if (btn.classList.contains('js-view')) {
-  openCandidate(id);
+openCandidate(id);
 } else if (btn.classList.contains('js-select')) {
-  promptSelect(id);
+promptSelect(id);
 }
-}, { once: true });
 }
 
 function openCandidate(id){
@@ -72,7 +91,6 @@ saveSelection(id, justif.trim());
 function saveSelection(candidateId, justification){
 const session = XState.getSession() || { team:'Team 1', dept:dept };
 const state = XState.getDeptState(session.team, dept);
-// Enforce one selection per role
 state.selections[roleId] = { candidateId, justification, savedAt: Date.now() };
 localStorage.setItem('ximhaa.progress.' + session.team + '.' + dept, JSON.stringify(state));
 UI.toast('Selection saved.');
