@@ -43,7 +43,7 @@ const strengths = (c.strengths || [])
   .map(s => `<span class="tag neutral">${s}</span>`)
   .join('');
 
-return 
+return `
   <div class="cand-card" data-id="${c.id}">
     <div class="cand-head">
       <h3>${c.name}</h3>
@@ -57,7 +57,7 @@ return
       <button class="nb-btn-outline js-select" data-id="${c.id}">Select</button>
     </div>
   </div>
-;
+`;
 }).join('');
 
 grid.innerHTML = cards;
@@ -117,3 +117,4 @@ function softLock(){
 document.querySelectorAll('.actions button').forEach(b => { b.disabled = true; b.style.opacity = .7; });
 const t = document.getElementById('timer'); if (t) t.textContent = 'Time is up';
 }
+
