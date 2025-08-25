@@ -3,7 +3,7 @@
   <div class="dept-card" style="border-color:rgba(238,173,14,.35)">
     <h3>Finance</h3>
     <div class="metrics"><span>4 Roles</span><span>20 Candidates</span><span class="badge">New: 5</span></div>
-    <button class="nb-btn" onclick="console.log('clicked'); chooseDept('finance')">Choose Department</button>
+    <button class="nb-btn" onclick="chooseDept('finance')">Choose Department</button>
   </div>
   <div class="dept-card" style="border-color:rgba(0,255,255,.25)">
     <h3>Marketing</h3>
@@ -19,5 +19,6 @@
 <section class="card-grid" style="grid-template-columns: 1fr 1fr;"> <div class="card"> <h3 style="margin:0 0 10px">Candidates by Department</h3> <canvas id="dept-cands" height="200"></canvas> </div> <div class="card"> <h3 style="margin:0 0 10px">Roles Viewed Trend</h3> <canvas id="roles-trend" height="200"></canvas> </div> </section>
 
 </main> <script src="https://cdn.jsdelivr.net/npm/chart.js"><script src="js/router.js"></script> <script src="js/state.js"></script> <script src="js/dashboard.js"></script> </body> </html>
+
 
 
