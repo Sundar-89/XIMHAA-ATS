@@ -32,3 +32,12 @@
 .resume-stage.loaded { animation: fadeIn .7s ease both; }
 .resume-img { width:100%; height:80vh; object-fit:contain; display:block; }
 @keyframes fadeIn { from { opacity:0; transform:scale(1.02); } to { opacity:1; transform:scale(1); } }
+.resume-wrap{display:grid;grid-template-columns:1.3fr .9fr;gap:16px}
+.resume-pane{padding:0}
+.resume-stage{position:relative;background:#0c0e21;border-radius:12px;border:1px solid rgba(0,255,255,.25);overflow:hidden}
+.resume-stage.loaded{animation:fadeIn .7s ease both}
+.resume-img{width:100%;height:80vh;object-fit:contain;display:block}
+@keyframes fadeIn{from{opacity:0;transform:scale(1.02)}to{opacity:1;transform:scale(1)}}
+
+
+
